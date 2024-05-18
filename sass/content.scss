@@ -1,0 +1,175 @@
+@import "../sass/breakPoint.scss";
+// start content
+.content {
+  overflow: hidden;
+
+  // start head
+  .head {
+    .search {
+      position: relative;
+      i {
+        color: #888;
+        font-size: 14px;
+      }
+      input {
+        cursor: pointer;
+        border: 1px solid #ccc;
+        width: 250px;
+        transition: width 0.3s;
+        &:focus {
+          outline-color: #ddd;
+          width: 550px;
+          &::placeholder {
+            opacity: 0;
+          }
+        }
+      }
+    }
+    .btn {
+      width: 30px;
+      height: 30px;
+    }
+  }
+  // end head
+  // #####################################
+  // start employees table
+  .employees {
+    border-radius: 10px;
+
+    .nationality,
+    .gender,
+    .marital-status {
+      position: relative;
+      select {
+        background-color: white;
+        outline: none;
+        /* remove the original arrow */
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        -o-appearance: none;
+        appearance: none;
+      }
+      .fa {
+        position: absolute;
+        top: 43px;
+        left: 15px;
+        color: #888;
+        pointer-events: none;
+      }
+    }
+
+    .table-responsive {
+      table {
+        font-size: 15px;
+        border-spacing: 0;
+
+        thead td {
+          font-weight: bold;
+        }
+        td {
+          padding: 15px;
+        }
+        tbody {
+          tr {
+            &:last-child {
+              border-right: 1px solid #eee;
+              cursor: pointer;
+            }
+            &:hover {
+              td {
+                background-color: #faf7f7;
+              }
+            }
+            td {
+              transition: 0.3s;
+              border-bottom: 1px solid #eee;
+              border-left: 1px solid #eee;
+              img {
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+              }
+              .status {
+                padding: 8px 16px;
+                color: white;
+                border-radius: 6px;
+              }
+              .dropdown-item {
+                background-color: transparent;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  // end employees table
+  .details {
+    label {
+      width: 100px;
+    }
+    .status {
+      span {
+        display: inline-block;
+        padding: 8px;
+
+        color: white;
+        border-radius: 6px;
+      }
+    }
+    .image {
+      margin-top: 100px;
+      margin-left: -40px;
+      display: none;
+      cursor: pointer;
+      width: 50px;
+      height: 50px;
+      i {
+        font-size: 22px;
+      }
+    }
+  }
+}
+@media (max-width: $mdx) {
+  .content {
+    .head {
+      .search {
+        input {
+          width: 165px !important;
+          &:focus {
+            width: 200px !important;
+          }
+        }
+      }
+    }
+    .employees {
+      .head-tabe {
+        button {
+          width: 60px !important;
+          padding: 8px;
+          span {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: $lgx) {
+  .content {
+    .head {
+      .search {
+        input {
+          width: 165px;
+          &:focus {
+            width: 400px;
+          }
+        }
+      }
+    }
+  }
+}
+// end content
+// start h1
+
+// end h1

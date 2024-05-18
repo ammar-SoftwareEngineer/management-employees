@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" type="image/x-icon" href="images/user_10968248.png" />
+    <title>ادارة الموظفيين</title>
+    <!-- external file css -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/arabic/style-ar.css" />
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="page">
+      <div class="row g-0">
+        <div class="col-lg-1 col-md-2 ">
+          <div class="sidebar bg-white p-4 position-fixed">
+            <div class="images d-flex justify-content-center">
+              <img
+                class="img-fluid mt-lg-0 mt-2"
+                src="images/user_10968248.png"
+                alt=""
+              />
+            </div>
+            <ul class="p-0 sidebar-nav">
+              <li>
+                <a
+                  class="active d-flex align-items-center text-black p-2 mb-2"
+                  href="index.html"
+                >
+                  <i class="fa-regular fa-user fa-fw"></i>
+                  <span class="me-2">الموظفيين</span>
+                </a>
+              </li>
+             
+            
+
+              <li>
+                <a
+                  class="d-flex align-items-center text-black p-2 mb-2"
+                  href="index.html"
+                >
+                  <i class="fa-solid fa-code fa-fw ms-sm-1"></i>
+                  <span class="me-2">المواقع الخاصة بنا</span>
+                </a>
+              </li>
+             
+
+             
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-11 col-md-10 ">
+          <div class="content" id="content">
+            <!-- start Head -->
+            <div class="head bg-white p-3 me-lg-3 me-md-2 me-5 pe-4 pe-lg-5">
+              <div class="search position-relative z-3">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input
+                  class="p-2 pe-5 rounded-3 ms-1"
+                  type="search"
+                  placeholder="اكتب الحروف الاساسية"
+                  id="search"
+                  oninput="searchData()"
+                />
+              </div>
+            </div>
+            <!-- end Head -->
+            <div class="container-fluid pe-4 pe-md-0">
+              <!-- start employees table -->
+              <div class="employees p-3 bg-white mt-4 me-lg-5 me-md-4 me-5">
+                <div
+                  class="head-tabe d-flex align-items-center justify-content-between mb-4"
+                >
+                  <h2 class="mt-0 mb-3">الموظفيين</h2>
+                  <!-- Button trigger modal -->
+                  <button
+                    type="button"
+                    class="btn btn-light"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModal"
+                  >
+                    <i class="fa-solid fa-plus ms-lg-2 ms-md-2 ms-0"></i>
+                    <span>اضافة الموظفيين</span>
+                  </button>
+                  <!-- Modal -->
+                  <div
+                    class="modal fade"
+                    id="exampleModal"
+                    tabindex="-1"
+                    aria-labelledby="exampleModalLabel"
+                    aria-hidden="true"
+                  >
+                    <div class="modal-dialog modal-xl">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h1 class="modal-title fs-5" id="exampleModalLabel">
+                            معلومات عامة
+                          </h1>
+                          <button
+                            type="button"
+                            class="btn-close ms-0"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                          ></button>
+                        </div>
+                        <div
+                          class="modal-body d-flex align-items-center flex-wrap"
+                        >
+                          <form action="" class="w-100">
+                            <div class="row gy-4">
+                              <div class="col-lg-12">
+                                <div
+                                  class="images d-flex justify-content-center mb-4 mt-3"
+                                >
+                                  <label class="image" for="img"
+                                    ><i class="fa fa-user-circle fa-5x"></i
+                                  ></label>
+                                  <input id="img" class="d-none" type="file" />
+                                  <img id="image-preview" />
+                                </div>
+                                <p class="text-center">اضافة صورة</p>
+                              </div>
+
+                              <div class="col-lg-6">
+                                <div class="ar-name">
+                                  <label for="ar-name"
+                                    >الاسم كاملا باللغة العربية</label
+                                  >
+                                  <input
+                                    id="ar-name"
+                                    class="form-control rounded-3 mt-2"
+                                    type="text"
+                                    aria-label="default input example"
+                                  />
+                                </div>
+                              </div>
+                              <div class="col-lg-6">
+                                <div class="en-name">
+                                  <label for="en-name"
+                                    >الاسم كاملا باللغة الانجليزية</label
+                                  >
+                                  <input
+                                    id="en-name"
+                                    class="form-control rounded-3 mt-2"
+                                    type="text"
+                                    aria-label="default input example"
+                                  />
+                                </div>
+                              </div>
+                              <div class="col-lg-3">
+                                <div class="number-work">
+                                  <label for="number-work"
+                                    >الرقم الوظيفي
+                                  </label>
+                                  <input
+                                    id="number-work"
+                                    class="form-control rounded-3 mt-2"
+                                    type="text"
+                                    aria-label="default input example"
+                                  />
+                                </div>
+                              </div>
+                              <div class="col-lg-3">
+                                <div class="number">
+                                  <label for="number">رقم الهوية/الاقامة</label>
+                                  <input
+                                    id="number"
+                                    class="form-control rounded-3 mt-2"
+                                    type="text"
+                                    aria-label="default input example"
+                                  />
+                                </div>
+                              </div>
+                              <div class="col-lg-3">
+                                <div class="nationality">
+                                  <label for="nationality">الجنسية</label>
+                                  <select
+                                    id="nationality"
+                                    class="form-control mt-2 rounded-3"
+                                  >
+                                    <option value="" disabled selected>
+                                      اختر الدولة
+                                    </option>
+                                    <option value="مصر">مصر</option>
+                                    <option value="السعودية">السعودية</option>
+                                  </select>
+                                  <i class="fa fa-chevron-down"></i>
+                                </div>
+                              </div>
+                              <div class="col-lg-3">
+                                <div class="email">
+                                  <label for="email" class="form-label"
+                                    >البريد الالكتروني</label
+                                  >
+                                  <input
+                                    type="email"
+                                    class="form-control"
+                                    id="email"
+                                    placeholder=""
+                                  />
+                                </div>
+                              </div>
+                              <div class="col-lg-3">
+                                <div class="phone">
+                                  <label for="phone" class="form-label"
+                                    >رقم الهاتف</label
+                                  >
+                                  <input
+                                    type="text"
+                                    class="form-control"
+                                    id="phone"
+                                  />
+                                </div>
+                              </div>
+                              <div class="col-lg-3">
+                                <div class="work">
+                                  <label for="work">العمل</label>
+                                  <input
+                                    id="work"
+                                    class="form-control rounded-3 mt-2"
+                                    type="text"
+                                    aria-label="default input example"
+                                  />
+                                </div>
+                              </div>
+                              <div class="col-lg-3">
+                                <div class="dapart">
+                                  <label for="dapart">القسم</label>
+                                  <input
+                                    id="dapart"
+                                    class="form-control rounded-3 mt-2"
+                                    type="text"
+                                    aria-label="default input example"
+                                  />
+                                </div>
+                              </div>
+                              <div class="col-lg-3">
+                                <div class="salary">
+                                  <label for="salary">الراتب</label>
+                                  <input
+                                    id="salary"
+                                    class="form-control rounded-3 mt-2"
+                                    type="number"
+                                    aria-label="default input example"
+                                  />
+                                </div>
+                              </div>
+                              <div class="col-lg-3">
+                                <div class="status">
+                                  <label for="status">الحالة</label>
+                                  <input
+                                    id="status"
+                                    class="form-control rounded-3 mt-2"
+                                    type="text"
+                                    aria-label="default input example"
+                                  />
+                                </div>
+                              </div>
+                              <div class="col-lg-3">
+                                <div class="gender">
+                                  <label for="gender">الجنس</label>
+                                  <select
+                                    id="gender"
+                                    class="form-control mt-2 rounded-3"
+                                  >
+                                    <option value="" disabled selected>
+                                      اختر الجنس
+                                    </option>
+                                    <option value="ذكر">ذكر</option>
+                                    <option value="انثى">انثى</option>
+                                  </select>
+                                  <i class="fa fa-chevron-down"></i>
+                                </div>
+                              </div>
+                              <div class="col-lg-3">
+                                <div class="marital-status">
+                                  <label for="marital-status"
+                                    >الحالة الاجتماعية</label
+                                  >
+                                  <select
+                                    id="marital-status"
+                                    class="form-control mt-2 rounded-3"
+                                  >
+                                    <option value="" disabled selected>
+                                      اختر الحالة الاجتماعية
+                                    </option>
+                                    <option value="متزوج">متزوج</option>
+                                    <option value="اعزب">اعزب</option>
+                                    <option value="اخرى">اخرى</option>
+                                  </select>
+                                  <i class="fa fa-chevron-down"></i>
+                                </div>
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+                        <div class="modal-footer">
+                          <button
+                            type="button"
+                            class="btn btn-light"
+                            data-bs-dismiss="modal"
+                          >
+                            اغلاق
+                          </button>
+                          <button id="submit" class="btn btn-outline-success">
+                            حفظ
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="table-responsive">
+                  <table class="table align-middle table-responsive">
+                    <thead>
+                      <tr>
+                        <td scope="col">ID</td>
+                        <td scope="col">الاسم</td>
+                        <td scope="col">تاريخ الانضمام</td>
+                        <td scope="col">عمله</td>
+                        <td scope="col">القسم</td>
+                        <td scope="col">الراتب</td>
+                        <td scope="col">الحالة</td>
+                        <td scope="col">التفاصيل</td>
+                      </tr>
+                    </thead>
+                    <tbody id="tbody"></tbody>
+                  </table>
+                </div>
+                <div
+                  class="count-user d-flex justify-content-between align-items-center mt-5"
+                >
+                  <p class="mt-3">
+                    عدد الموظفيين
+                    <span
+                      id="count"
+                      class="bg-success text-white py-1 px-2 rounded-3"
+                    ></span>
+                  </p>
+                  <button class="btn btn-outline-danger" onclick="deleteData()">
+                    حذف كل الموظفين
+                  </button>
+                </div>
+              </div>
+              <!-- end employees table -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+      <div
+        id="liveToast"
+        class="toast"
+        role="alert"
+        aria-live="assertive"
+        aria-atomic="true"
+      >
+        <div class="toast-header">
+          <strong class="me-auto">Bootstrap</strong>
+          <small>11 mins ago</small>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="toast"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="toast-body">Hello, world! This is a toast message.</div>
+      </div>
+    </div>
+
+    <!-- external file js -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js" ></script>
+  </body>
+</html>

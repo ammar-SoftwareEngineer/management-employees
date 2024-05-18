@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" type="image/x-icon" href="images/user_10968248.png" />
+    <title>بيانات الموظف</title>
+    <!-- external file css -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/arabic/style-ar.css" />
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="page">
+      <div class="row g-0">
+        <div class="col-lg-1 col-md-2">
+          <div class="sidebar bg-white p-4 position-fixed">
+            <div class="images d-flex justify-content-center">
+              <img
+                class="img-fluid mt-lg-0 mt-2"
+                src="images/user_10968248.png   "
+                alt=""
+              />
+            </div>
+            <ul class="p-0 sidebar-nav">
+              <li>
+                <a
+                  class="active d-flex align-items-center text-black p-2 mb-2"
+                  href="index.html"
+                >
+                  <i class="fa-regular fa-user fa-fw"></i>
+                  <span class="me-2">الموظفيين</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  class="d-flex align-items-center text-black p-2 mb-2"
+                  href="index.html"
+                >
+                  <i class="fa-solid fa-code fa-fw ms-sm-1"></i>
+                  <span class="me-2">المواقع الخاصة بنا</span>
+                </a>
+              </li>
+              
+
+      
+              
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-11 col-md-10">
+          <div class="content" id="content">
+            <!-- start Head -->
+            <div class="head bg-white p-3 me-lg-3 me-md-2 me-5 pe-4 pe-lg-5">
+              <div class="row">
+                <div class="col-lg-1 col-md-1 col-2">
+                  <button
+                    onclick="back()"
+                    class="btn btn-outline-success d-flex justify-content-center align-items-center text-center rounded-circle"
+                  >
+                    <i class="fas fa-chevron-right"></i>
+                  </button>
+                </div>
+                <div class="col-lg-11 col-md-11 col-10">
+                  <h3>معلومات الموظف</h3>
+                </div>
+              </div>
+            </div>
+            <!-- end Head -->
+            <div class="container-fluid pt-4 pe-md-4 pe-5">
+              <div 
+                class="details bg-white text-center p-4 me-4 rounded-3"
+                id="details"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ################################# -->
+    <script src="js/details.js" ></script>
+  </body>
+</html>
