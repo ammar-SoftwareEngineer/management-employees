@@ -39,7 +39,7 @@ images.addEventListener("change", () => {
     imagePreview.style.display = "none";
   } else {
     imagePreview.style.cssText =
-      "display:block; width:150px; border-radius: 10px";
+      "display:block; width:150px; height:150px; border-radius: 100px";
     image.style.display = "none";
   }
 });
@@ -76,6 +76,7 @@ submit.onclick = function () {
   dataPro.push(newPro);
   // save local storge
   localStorage.setItem("emp", JSON.stringify(dataPro));
+  window.location.reload();
   showData();
   clearData();
   searchData();
@@ -146,11 +147,7 @@ function getDetails(index) {
   location.href = `details.html?id=${selectedData.id}`;
 }
 
-function deleteData() {
-  dataPro = [];
-  localStorage.removeItem("emp");
-  showData();
-}
+
 
 function deleteUser(index) {
   dataPro.splice(index, 1);

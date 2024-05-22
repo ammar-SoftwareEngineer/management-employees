@@ -43,12 +43,12 @@
 }
 .content .employees .nationality,
 .content .employees .gender,
-.content .employees .marital-status {
+.content .employees .marital-status, .content .employees .status {
   position: relative;
 }
 .content .employees .nationality select,
 .content .employees .gender select,
-.content .employees .marital-status select {
+.content .employees .marital-status select, .content .employees .status select {
   background-color: white;
   outline: none;
   /* remove the original arrow */
@@ -59,7 +59,7 @@
 }
 .content .employees .nationality .fa,
 .content .employees .gender .fa,
-.content .employees .marital-status .fa {
+.content .employees .marital-status .fa, .content .employees .status .fa {
   position: absolute;
   top: 43px;
   left: 15px;
