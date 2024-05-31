@@ -1,2 +1,2 @@
-# manager-employees
+# management-employees
 The project javascript
